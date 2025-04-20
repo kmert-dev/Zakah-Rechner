@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zakah Rechner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Zakah Rechner</h1>
+  <div class="container">
+    <div class="info-section">
+      <h3>Info zur Methode</h3>
+      <div id="infoText">Wähle eine Methode aus, um Informationen anzuzeigen.</div>
+    </div>
+
+    <div class="form-section">
+      <label for="method">Methode wählen:</label>
+      <select id="method" onchange="updateInfoText()">
+        <option value="">Bitte wählen</option>
+        <option value="1">Gold (X Karat → 24K)</option>
+        <option value="2">Silber (925 K) → Euro</option>
+        <option value="3">Gold (24 K) → Euro</option>
+        <option value="4">Papiergeld → Euroabgabe</option>
+      </select>
+
+      <div id="inputsContainer"></div>
+      <button onclick="berechne()">Berechnen</button>
+      <div id="result" class="result"></div>
+    </div>
+
+    <div class="notes-section">
+      <h3>Eigene Notizen</h3>
+      <textarea rows="10" placeholder="Hier kannst du deine eigenen Notizen schreiben..."></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
